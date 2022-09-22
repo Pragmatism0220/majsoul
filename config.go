@@ -7,15 +7,16 @@ type ServerAddress struct {
 	GameAddress    string `json:"gameAddress"`
 }
 
-var ServerAddressList = []*ServerAddress{
-	{
-		ServerAddress:  "https://game.maj-soul.net",
-		GatewayAddress: "wss://gateway-hw.maj-soul.net/gateway",
-		GameAddress:    "wss://gateway-hw.maj-soul.com/game-gateway",
-	},
-	{
-		ServerAddress:  "https://game.maj-soul.com",
-		GatewayAddress: "wss://gateway-sy.maj-soul.com/gateway",
-		GameAddress:    "wss://gateway-sy.maj-soul.com/game-gateway",
-	},
+func generateMajsoulServerAddressList() (ServerAddressList []*ServerAddress) {
+	wsURLs, _ := GetMajsoulWebSocketURLs()
+	for _, ws := range wsURLs {
+		server := new(ServerAddress)
+		server.ServerAddress = "https://game.maj-soul.net"
+		server.GatewayAddress = ws + "gateway"
+		server.GameAddress = ws + "game-gateway"
+		ServerAddressList = append(ServerAddressList, server)
+	}
+	return
 }
+
+var ServerAddressList = generateMajsoulServerAddressList()

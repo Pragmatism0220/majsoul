@@ -29,6 +29,8 @@ func NewMajsoul() *Majsoul {
 
 func main() {
 	mSoul := NewMajsoul()
+	log.Printf("WebSocket网关: %s", mSoul.ServerAddress.GatewayAddress)
+
 	resLogin, err := mSoul.Login("account", "password")
 	if err != nil {
 		log.Fatal(err)
@@ -36,6 +38,8 @@ func main() {
 	if resLogin.Error != nil {
 		log.Fatal(resLogin.Error)
 	}
+
+	log.Println("登陆成功！")
 
 	// 检查是否在游戏中
 	if resLogin.Account.RoomId != 0 {
