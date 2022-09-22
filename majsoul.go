@@ -9,8 +9,8 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/constellation39/majsoul/message"
-	"github.com/constellation39/majsoul/utils"
+	"github.com/Pragmatism0220/majsoul/message"
+	"github.com/Pragmatism0220/majsoul/utils"
 	"github.com/golang/protobuf/proto"
 )
 
@@ -367,10 +367,12 @@ func uuid() string {
 func (majsoul *Majsoul) Login(account, password string) (*message.ResLogin, error) {
 	if majsoul.UUID == "" {
 		majsoul.UUID = uuid()
-		err := utils.SaveFile(uuidFile, []byte(majsoul.UUID))
-		if err != nil {
-			return nil, err
-		}
+		/*
+			err := utils.SaveFile(uuidFile, []byte(majsoul.UUID))
+			if err != nil {
+				return nil, err
+			}
+		*/
 	}
 	loginRes, err := majsoul.LobbyClient.Login(majsoul.Ctx, &message.ReqLogin{
 		Account:   account,

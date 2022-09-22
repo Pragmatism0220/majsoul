@@ -3,7 +3,7 @@ package majsoul
 import (
 	"log"
 
-	"github.com/constellation39/majsoul/message"
+	"github.com/Pragmatism0220/majsoul/message"
 	"github.com/golang/protobuf/proto"
 )
 

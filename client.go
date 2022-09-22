@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/constellation39/majsoul/message"
-	"github.com/constellation39/majsoul/utils"
+	"github.com/Pragmatism0220/majsoul/message"
+	"github.com/Pragmatism0220/majsoul/utils"
 	"github.com/golang/protobuf/proto"
 	"google.golang.org/grpc"
 )

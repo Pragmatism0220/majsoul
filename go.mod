@@ -1,4 +1,4 @@
-module github.com/constellation39/majsoul
+module github.com/Pragmatism0220/majsoul
 
 go 1.18
 

@@ -1,6 +1,6 @@
 package majsoul
 
-import "github.com/constellation39/majsoul/message"
+import "github.com/Pragmatism0220/majsoul/message"
 
 // IFNotify
 // 雀魂proto协议中缺少描述监听消息的接口

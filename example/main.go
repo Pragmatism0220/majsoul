@@ -5,8 +5,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/constellation39/majsoul"
-	"github.com/constellation39/majsoul/message"
+	"github.com/Pragmatism0220/majsoul"
+	"github.com/Pragmatism0220/majsoul/message"
 )
 
 // Majsoul 组合库中的 Majsoul 结构

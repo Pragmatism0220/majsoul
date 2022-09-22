@@ -9,7 +9,7 @@
 ### 安装
 
 ```
-go get -u github.com/constellation39/majsoul
+go get -u github.com/Pragmatism0220/majsoul
 ```
 
 ## 示例
@@ -193,4 +193,4 @@ func (mSoul *Majsoul) ActionChiPengGang(action *message.ActionChiPengGang) {
 
 ```
 
-完整的示例文件在 [example](https://github.com/constellation39/majsoul/tree/master/example) 文件中
+完整的示例文件在 [example](https://github.com/Pragmatism0220/majsoul/tree/master/example) 文件中

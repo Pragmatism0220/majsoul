@@ -1,6 +1,6 @@
 package majsoul
 
-import "github.com/constellation39/majsoul/message"
+import "github.com/Pragmatism0220/majsoul/message"
 
 func (majsoul *Majsoul) ActionMJStart(action *message.ActionMJStart) {
 }

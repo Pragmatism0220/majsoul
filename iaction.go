@@ -1,6 +1,6 @@
 package majsoul
 
-import "github.com/constellation39/majsoul/message"
+import "github.com/Pragmatism0220/majsoul/message"
 
 // IFAction 游戏内消息接口
 type IFAction interface {
