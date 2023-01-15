@@ -8,4 +8,4 @@ import (
 	_ "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
 )
 
-// Get https://game.maj-soul.net/1/v0.10.135.w/res/proto/liqi.json
+// Get https://game.maj-soul.com/1/v0.10.135.w/res/proto/liqi.json

@@ -11,7 +11,7 @@ func generateMajsoulServerAddressList() (ServerAddressList []*ServerAddress) {
 	wsURLs, _ := GetMajsoulWebSocketURLs()
 	for _, ws := range wsURLs {
 		server := new(ServerAddress)
-		server.ServerAddress = "https://game.maj-soul.net"
+		server.ServerAddress = "https://game.maj-soul.com"
 		server.GatewayAddress = ws + "gateway"
 		server.GameAddress = ws + "game-gateway"
 		ServerAddressList = append(ServerAddressList, server)

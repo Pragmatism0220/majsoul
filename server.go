@@ -80,8 +80,8 @@ func getConfig(apiGetConfigURL string) (config *majsoulConfig, err error) {
 		return
 	}
 	for idx, _ := range config.IP[0].RegionURLs {
-		config.IP[0].RegionURLs[idx].URL = strings.Replace(config.IP[0].RegionURLs[idx].URL, "maj-soul.com", "maj-soul.net", -1)
-		config.IP[0].RegionURLs[idx].OB_URL = strings.Replace(config.IP[0].RegionURLs[idx].OB_URL, "maj-soul.com", "maj-soul.net", -1)
+		config.IP[0].RegionURLs[idx].URL = strings.Replace(config.IP[0].RegionURLs[idx].URL, "maj-soul.net", "maj-soul.com", -1)
+		config.IP[0].RegionURLs[idx].OB_URL = strings.Replace(config.IP[0].RegionURLs[idx].OB_URL, "maj-soul.net", "maj-soul.com", -1)
 	}
 	return
 }
@@ -117,7 +117,7 @@ func GetMajsoulWebSocketURLs() (murl []string, err error) {
 
 	apiGetMainlandRecommendListURL := config.apiGetMainlandRecommendListURL()
 	for idx, _ := range apiGetMainlandRecommendListURL {
-		apiGetMainlandRecommendListURL[idx] = strings.Replace(apiGetMainlandRecommendListURL[idx], "maj-soul.com", "maj-soul.net", -1)
+		apiGetMainlandRecommendListURL[idx] = strings.Replace(apiGetMainlandRecommendListURL[idx], "maj-soul.net", "maj-soul.com", -1)
 	}
 	servers, err := getRecommendServers(apiGetMainlandRecommendListURL)
 	if err != nil {
